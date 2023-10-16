@@ -26,8 +26,10 @@ try:
 	data2 = import_file(sys.argv[2])
 except IndexError:
 	print("Please provide two files as argument\n(e.g. python3 Compare_Files.py Test.txt)")
+	quit()
 except FileNotFoundError:
 	print("This file does not exist.\nPlease provide an existing file as argument")
+	quit()
 
 
 print(len(data1), len(data2))
